@@ -1,19 +1,3 @@
-/**
- * p5.js sketch for "Routing in Histograms"
- *
- * This is a complete rewrite based on a thorough reading of the paper.
- * It corrects all previously identified bugs related to illegal paths and
- * infinite loops.
- *
- * Core Corrected Concepts:
- * 1.  `isRectilinearVisible`: Implements the paper's definition ("bounding
- *     rectangle is in P") by checking for collisions with the histogram body.
- * 2.  Dominator Selection: Correctly finds the Near (`nd`) and Far (`fd`)
- *     Dominators using the paper's tie-breaking rule (closest to base line).
- * 3.  Routing Algorithm: Faithfully implements the 3-case routing scheme
- *     with robust logic that prevents loops.
- */
-
 let vertices = [];
 let startVertex = null;
 let targetVertex = null;
